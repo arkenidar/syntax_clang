@@ -9,12 +9,18 @@ int main(){
     }
     cout << endl;
 
+    // =====================
+
     string names[]={"north", "south", "west", "east"};
     int names_count=4;
     for(int index=0; index<names_count; index+=1){
         cout << names[index] << " - ";
     }
     cout << endl;
+
+    // =====================
+
+    for(auto name: names) cout << name << endl;
 
     return 0;
 }
