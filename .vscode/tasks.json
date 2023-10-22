@@ -2,7 +2,7 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe compila il file attivo",
+            "label": "C: gcc.exe compiles the active file",
             "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
@@ -12,17 +12,20 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "C:/msys64/mingw64/bin"
             },
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
-            "detail": "Attività generata dal debugger."
+            "group": {
+                "kind": "build",
+                //"isDefault": true
+            },
+            "detail": "compiler gcc: C:/msys64/mingw64/bin/gcc.exe"
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe compila il file attivo",
+            "label": "C++: g++.exe compiles the active file",
             "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
@@ -41,7 +44,53 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "compilatore: C:/msys64/mingw64/bin/g++.exe"
+            "detail": "compiler g++: C:/msys64/mingw64/bin/g++.exe"
+        },
+        {
+            "type": "cppbuild",
+            "label": "[GCC BUILDS GBIN] NO .exe BUT .GBIN; C/C++: gcc compila il file attivo",
+            "command": "gcc",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.gbin"
+            ],
+            "options": {
+                /*  "cwd": "C:\\msys64\\mingw64\\bin" */
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                //"isDefault": true
+            },
+            "detail": "Attività generata dal debugger."
+        },
+        {
+            "type": "cppbuild",
+            "label": "[G++ BUILDS GBIN] NO .exe BUT .GBIN; C/C++: g++ compila il file attivo",
+            "command": "g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.gbin"
+            ],
+            "options": {
+                /*  "cwd": "C:\\msys64\\mingw64\\bin" */
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                //"isDefault": true
+            },
+            "detail": "Attività generata dal debugger."
         }
     ],
     "version": "2.0.0"
